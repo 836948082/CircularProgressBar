@@ -1,19 +1,38 @@
-CircularProgressBar
+#CircularProgressBar
 
-DragLayout的拓展，增加了右侧功能选项，类似与qq，
+This is an Android project allowing to realize a circular ProgressBar in the simplest way possible.
 
-主界面listview新增滑动删除选项，另增加粘性控件，
+![](https://github.com/836948082/CircularProgressBar/blob/master/image/image.gif)
 
-主界面长按头像可屏蔽菜单滑出时主界面缩放，再次长按可取消屏蔽
+USAGE
+-----
 
-基于https://github.com/Qiang3570/DragLayout的拓展功能
+To make a circular ProgressBar add CircularProgressBar in your layout XML and add CircularProgressBar library in your project or you can also grab it via Gradle:
 
-![](https://github.com/Qiang3570/DragLayoutExpand/blob/master/sample.gif)
+```groovy
+compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+```
 
-修复第一次滑动打开左、右菜单，缩放问题
-onStartOpen 重写方法中先执行一遍adapter刷新(可解决)
-            adapter.notifyDataSetChanged();
+XML
+-----
 
-解决长按头像切换动画后右侧菜单不显示问题
-dispathDragEvent 方法中增加逻辑判断(可解决)
-            animBackView(1.0f);
+```xml
+<com.mikhaellopez.circularprogressbar.CircularProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cpb_background_progressbar_color="#FFCDD2"
+    app:cpb_background_progressbar_width="5dp"
+    app:cpb_progressbar_color="#F44336"
+    app:cpb_progressbar_width="10dp" />
+```
+
+You must use the following properties in your XML to change your CircularProgressBar.
+
+
+#####Properties:
+
+* `app:cpb_progress`                      (integer)   -> default 0
+* `app:cpb_progressbar_color`             (color)     -> default BLACK
+* `app:cpb_background_progressbar_color`  (color)     -> default GRAY
+* `app:cpb_progressbar_width`             (dimension) -> default 7dp
+* `app:cpb_background_progressbar_width`  (dimension) -> default 3dp

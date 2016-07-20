@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.github:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/lopspower/CircularProgressBar")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/836948082/CircularProgressBar")));
                 return true;
             case R.id.beer:
                 new AlertDialog.Builder(this)
